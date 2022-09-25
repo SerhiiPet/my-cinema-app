@@ -23,21 +23,11 @@ public class DataInitializer {
         Role adminRole = new Role();
         adminRole.setRoleName(Role.RoleName.ADMIN);
         roleService.add(adminRole);
-
-        Role userRole = new Role();
-        userRole.setRoleName(Role.RoleName.USER);
-        roleService.add(userRole);
-
         User bobUser = new User();
-        bobUser.setEmail("bob@i.ua");
-        bobUser.setPassword("12345678");
+
+        bobUser.setEmail("e-mail address of the administrator");
+        bobUser.setPassword("password of the administrator");
         bobUser.setRoles(Set.of(adminRole));
         userService.add(bobUser);
-
-        User aliceUser = new User();
-        aliceUser.setEmail("alice@i.ua");
-        aliceUser.setPassword("87654321");
-        aliceUser.setRoles(Set.of(userRole));
-        userService.add(aliceUser);
     }
 }
